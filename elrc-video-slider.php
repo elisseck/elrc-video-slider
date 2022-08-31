@@ -12,7 +12,7 @@ require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php';
 require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php';
 
 function elrc_video_slider_assets() {
-	wp_register_style('elrc-video-slider-style', plugins_url(__FILE__) . 'assets/elrc-video-slider.css', array(), '1.0', 'all');
+  wp_register_style('elrc-video-slider-style', plugins_url(__FILE__) . 'assets/elrc-video-slider.css', array(), '1.0', 'all');
 }
 
 function elrc_video_slider_content() {
