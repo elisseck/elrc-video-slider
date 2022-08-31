@@ -11,14 +11,19 @@
 require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php';
 require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php';
 
-function elrc_video_slider_assets() {
-  wp_register_style('elrc-video-slider-style', plugins_url(__FILE__) . 'assets/elrc-video-slider.css', array(), '1.0', 'all');
+function elrc_video_slider_assets() {;
+
+//https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js
 }
 
 function elrc_video_slider_content() {
   $filesystem = new WP_Filesystem_Direct(NULL);
   $html = $filesystem->get_contents(plugin_dir_path(__FILE__) . 'assets/elrc-video-slider.html');
-  wp_enqueue_style('elrc_video_slider_assets');
+  wp_enqueue_style('elrc_video_slider_swiper_css', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css', [], '1.0', false);
+  wp_enqueue_script('elrc_video_slider_swiper_js', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js', [], '1.0', false);
+  wp_enqueue_style('elrc_video_slider_assets', plugin_dir_url(__FILE__) . 'assets/elrc-video-slider.css', [], '1.0', false);
+  wp_enqueue_script('elrc_video_slick_init', plugin_dir_url(__FILE__) . 'assets/elrc-video-slider.js', [], '1.0', true);
+
 
   return $html;
 }

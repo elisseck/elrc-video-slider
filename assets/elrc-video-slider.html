@@ -1,74 +1,60 @@
-<!-- reference examples at https://www.idangero.us/swiper/demos/#.Vl8kD9-rRHc -->
-<section id="lab_video_slider">
-  <div class="container-fluid">
-    <div class="row">
-      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-
-      <!-- Link Swiper's CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/css/swiper.min.css">
-
       <!-- Swiper -->
       <div class="swiper-container">
         <div class="swiper-wrapper">
 
           <div id="slide_one" class="swiper-slide">
-            <!-- VIDEO -->
-            <video class="slider-video" width="100%" preload="auto" loop="" autoplay="" style="visibility: visible; width: 100%;" poster="//dl.dropbox.com/s/pjopy0mu4klisat/working-with-espresso.jpg">
-              <source src="//dl.dropbox.com/s/931244iox7i0fpk/working-with-espresso.mp4" type="video/mp4">
-            </video>
-            <!-- END VIDEO -->
-          </div>
-
-          <div id="slide_two" class="swiper-slide">
-            <div id="lab_video_text_overlay">
+            <div class="text_overlay">
               <div class="container">
-                <h2>Lorum Ipsum Deloras </h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie</p>
-                <a href="#" class="btn btn-default">View Our Work</a>
-                <a href="#" class="btn btn-warning">Learn About Us</a>
+                <h2>Service is our Priority</h2>
+                <p>We are committed to our client's success as our own top metric</p>
+                <a href="#" class="btn btn-default">Services</a>
 
               </div>
             </div>
-            <!-- end #lab_overlay -->
-
-            <video class="slider-video" width="100%" preload="auto" loop="" autoplay="" style="visibility: visible; width: 100%;" poster="//dl.dropbox.com/s/ijyaav8qzkdtyt5/lab-coding-screenshot.jpg">
-              <source src="//dl.dropbox.com/s/5z4jupv385iboiu/lab-coding.mp4" type="video/mp4">
+            <video class="slider-video super-lazy" loop="" autoplay="">
+              <source src="/wp-content/uploads/2022/08/output.mp4" type="video/mp4">
             </video>
+
+          </div>
+
+          <div id="slide_two" class="swiper-slide">
+            <div class="text_overlay">
+              <div class="container">
+                <h2>Supporting Semi Photolythography Excimer Lasers Since 2005</h2>
+                <p>ELRC saves customers money on parts and services for their Excimer Lasers. Used by over 100 fabs around the world.</p>
+                <a href="#" class="btn btn-default">Products</a>
+
+              </div>
+            </div>
+            <video class="slider-video super-lazy" loop="" autoplay="">
+              <source src="/wp-content/uploads/2022/08/output.mp4" type="video/mp4">
+            </video>
+
           </div>
 
           <div id="slide_three" class="swiper-slide">
-             <!-- VIDEO -->
-            <video class="slider-video" width="100%" preload="auto" loop="" autoplay="" style="visibility: visible; width: 100%;" poster="//dl.dropbox.com/s/5aeyg9ntj1fs8v1/typing-numbers.jpg">
-              <source src="//dl.dropbox.com/s/xmosdvoleruexky/typing-numbers.mp4" type="video/mp4">
+            <div class="text_overlay">
+              <div class="container">
+                <h2>Training and Support</h2>
+                <p>Have a question; Free phone tech support. Parts ship within a day – without any contracts, lead times or expedite fees.</p>
+                <a href="#" class="btn btn-default">Training Information</a>
+
+              </div>
+            </div>
+            <video class="slider-video super-lazy" loop="" autoplay="">
+              <source src="/wp-content/uploads/2022/08/output.mp4" type="video/mp4">
             </video>
-            <!-- END VIDEO -->
+
           </div>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
-
-      <!-- Swiper JS -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/js/swiper.min.js"></script>
-
-      <!-- Initialize Swiper -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
       <script>
         var swiper = new Swiper('.swiper-container', {
-          pagination: '.swiper-pagination',
-          paginationClickable: true,
-          nextButton: '.swiper-button-next',
-          prevButton: '.swiper-button-prev',
-          spaceBetween: 30,
-          autoplay: 5000,
-          autoplayDisableOnInteraction: false
+          loop: true,
+          slidesPerView: 'auto',
+          autoplay: {
+            delay: 5000,
+          },
         });
       </script>
-    </div>
-    <!-- end .row -->
-  </div>
-  <!-- end .container-->
-</section>
-<!-- end #section -->
