@@ -44,6 +44,14 @@ video.slider-video {
   .text_wrap {
     height: 300px;
   }
+
+  .swiper-slide video {
+    display: block;
+    width: auto;
+    height: 40em;
+    object-fit: cover;
+    overflow: hidden;
+  }
 }
 
 @media screen and (max-width:650px) {
