@@ -48,6 +48,9 @@
           </div>
         </div>
       </div>
+      <div id="arrow-bounce" class="arrow bounce">
+        <a class="fa fa-arrow-down fa-2x" href="#"></a>
+      </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
       <script>
         var swiper = new Swiper('.swiper-container', {
@@ -57,4 +60,11 @@
             delay: 8000,
           },
         });
+      </script>
+      <script>
+        document.onscroll = function() {
+          if (window.innerHeight + window.scrollY > document.body.clientHeight) {
+            document.getElementById('arrow-bounce').style.display='none';
+          }
+        }
       </script>
